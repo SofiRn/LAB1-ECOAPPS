@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>LAB 1</title>
+		<style>
+			body {
+				font-family: poppins, sans-serif;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: left;
+				/* height: 300vh; */
+				margin-left: 20px;
+			}
+
+			input,
+			select,
+			button {
+				display: block;
+				width: 100px;
+				margin: 10px 0;
+				padding: 10px;
+				border: none;
+				border-radius: 5px;
+			}
+			button {
+				background-color: #002afa;
+				color: white;
+				cursor: pointer;
+			}
+
+			#api1,
+			#limit,
+			#search,
+			#search-button,
+			#clear-button {
+				margin-right: 20px;
+			}
+			.card-container {
+				margin-top: 20px;
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
+				gap: 10px;
+			}
+			#search-container,
+			#buttons-anime,
+			#buttonsPart1 {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			.card {
+				background-color: #c6e7ff;
+				padding: 15px;
+				border-radius: 10px;
+				box-shadow: 0 0 10px rgba(164, 164, 164, 0.5);
+				margin-right: 20px;
+				margin-bottom: 20px;
+			}
+			.card img {
+				width: 100%;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="part1">
+			<h1>FUN FACTS DE GATOS</h1>
+			<p>Conoce datos curisos que han dicho personas sobre gatos</p>
+			<div id="buttonsPart1">
+				<div id="data-container1">
+					<button id="api1">Foto de la persona</button>
+				</div>
+				<div id="data-container2">
+					<button id="api2">Dato curioso</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="part2">
+			<h1>Buscar Anime</h1>
+			<div id="search-container">
+				<input type="number" id="limit" placeholder="Número Límite" />
+				<input type="text" id="search" placeholder="Buscar" />
+				<select id="type">
+					<option value="">Todos los Tipos</option>
+					<option value="tv">Serie</option>
+					<option value="movie">Película</option>
+				</select>
+			</div>
+			<div id="buttons-anime">
+				<button id="search-button">Buscar</button>
+				<button id="clear-button">Limpiar</button>
+			</div>
+			<div id="data-container3" class="card-container"></div>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>
